@@ -5,7 +5,7 @@ require 'colorize'
 module SillyFormatYay
   class SillyFormat < RSpec::Core::Formatters::BaseTextFormatter
 
-    RSpec::Core::Formatters.register self, :example_passed, :example_failed
+    RSpec::Core::Formatters.register(formatter_class, *notifications) self, :example_passed, :example_failed
 # def start(StartNotification)
 # end
 #
