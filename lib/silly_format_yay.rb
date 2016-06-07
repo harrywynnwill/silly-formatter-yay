@@ -2,7 +2,7 @@ require "silly_format_yay/version"
 require 'rspec/core/formatters/base_text_formatter'
 require 'colorize'
 
-module SillyFormatYay
+# module SillyFormatYay
   class SillyFormat < RSpec::Core::Formatters::BaseTextFormatter
 
     RSpec::Core::Formatters.register self, :example_passed, :example_failed
@@ -94,4 +94,4 @@ end
 
 # rspec --require /Users/maceybaker/Desktop/makers/gem-practice/silly-format/lib/rspec/formatter/silly/silly_format.rb --format SillyFormat
   end
-end
+# end
