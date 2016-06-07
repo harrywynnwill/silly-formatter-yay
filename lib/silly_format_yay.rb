@@ -3,7 +3,7 @@ require 'rspec/core/formatters/base_text_formatter'
 require 'colorize'
 
 module SillyFormatYay
-  class SillyFormat < RSpec::Core::Formatters::BaseTextFormatter
+  class SillyFormatYay < RSpec::Core::Formatters::BaseTextFormatter
 
     RSpec::Core::Formatters.register(self, *:example_passed, :example_failed)
 # def start(StartNotification)
