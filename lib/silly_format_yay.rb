@@ -15,7 +15,7 @@ class SillyFormatYay
 
 
     def example_passed(example)
-      ConsoleCodes.wrap("#{current_indentation}#{example.description.strip}", :success)
+      "#{current_indentation}#{example.description.strip}", :success
 
       # if MacOS.version >= :lion
         @output.print ([' 🍺 ',' 🙌 ', ' 😍 '].sample).colorize(:background => :green)
@@ -25,9 +25,9 @@ class SillyFormatYay
     end
 
     def example_failed(example)
-      ConsoleCodes.wrap("#{current_indentation}#{example.description.strip} " \
-                        "(FAILED - #{next_failure_index})",
-                        :failure)
+      "#{current_indentation}#{example.description.strip} " \
+        "(FAILED - #{next_failure_index})",
+        :failure)
 
       # if MacOS.version >= :lion
         @output.print ([' 😨 ', ' 😵 ', ' 🙅 '].sample).colorize(:background => :red)
