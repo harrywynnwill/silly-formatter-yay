@@ -1,5 +1,6 @@
 require 'rspec/core/formatters/base_text_formatter'
 require 'colorize'
+require 'byebug'
 
 class SillyFormatYay < RSpec::Core::Formatters::BaseTextFormatter
   # This registers the notifications this formatter supports, and tells
@@ -15,8 +16,8 @@ class SillyFormatYay < RSpec::Core::Formatters::BaseTextFormatter
 
 
     def example_passed(example)
-      super(example)
       # if MacOS.version >= :lion
+        print example.description.strip
         @output.print ([' 🍺 ',' 🙌 ', ' 😍 '].sample).colorize(:background => :green)
       # else
       #   output.print ([' YAY ', ' YAAASS ', ' NICE '].sample).colorize(:background => :green)
@@ -24,7 +25,7 @@ class SillyFormatYay < RSpec::Core::Formatters::BaseTextFormatter
     end
 
     def example_failed(example)
-        super(example)
+        print example.description.strip
       # if MacOS.version >= :lion
         @output.print ([' 😨 ', ' 😵 ', ' 🙅 '].sample).colorize(:background => :red)
       # else
@@ -32,14 +33,7 @@ class SillyFormatYay < RSpec::Core::Formatters::BaseTextFormatter
       # end
     end
 
-    # private
-    #
-    # def next_failure_index
-    #   @next_failure_index ||= 0
-    #   @next_failure_index += 1
-    # end
+    def example_group_finished(example)
 
-    # def close(example)
-    # end
-
+    end
 end
