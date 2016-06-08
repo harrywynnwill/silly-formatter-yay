@@ -1,12 +1,12 @@
 require 'rspec/core/formatters/base_text_formatter'
-require "./silly_format_yay/version"
+require "silly_format_yay/version"
 
 module RSpec
   module Formatters
     module SillyFormatYay
       class SillyFormatYay < RSpec::Core::Formatters::BaseTextFormatter
 
-        Object::RSpec::Core::LegacyFormatters.register self, *[:example_passed, :example_failed]
+        Object::RSpec::Core::Formatters.register self, *[:example_passed, :example_failed]
           def example_passed(example)
             # if MacOS.version >= :lion
               output.print ([' 🍺 ',' 🙌 ', ' 😍 '].sample).colorize(:background => :green)
@@ -54,8 +54,4 @@ module RSpec
       end
     end
   end
-end
-
-RSpec.configure do |config|
-  config.formatter = "RSpec::Formatters::SillyFormatYay"
 end
