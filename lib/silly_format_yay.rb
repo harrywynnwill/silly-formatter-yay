@@ -7,13 +7,10 @@ class SillyFormatYay
   RSpec::Core::Formatters.register self, *[:example_started, :example_passed, :example_failed]
 
     def initialize(_output)
-      port = RSpec.configuration.drb_port
-      drb_uri = "druby://localhost:#{port}"
       @all_example_ids = []
       @failed_example_ids = []
-      @bisect_server = DRbObject.new_with_uri(drb_uri)
       @remaining_failures = []
-      RSpec.configuration.files_or_directories_to_run = @bisect_server.files_or_directories_to_run
+      @output = output
     end
 
     def example_started(notification)
