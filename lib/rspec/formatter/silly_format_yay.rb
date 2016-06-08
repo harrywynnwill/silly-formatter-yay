@@ -3,11 +3,10 @@ require 'rspec/core/formatters/base_text_formatter'
 
 module RSpec
   module Formatters
+    module SillyFormatYay
     class SillyFormatYay < RSpec::Core::Formatters::BaseTextFormatter
 
-      def new
         Object::RSpec::Core::Formatters.register self, *[:example_passed, :example_failed]
-      end
 # def start(StartNotification)
 # end
 #
@@ -94,6 +93,7 @@ def close(example)
   ')
 end
 
+end
 end
 end
 end
