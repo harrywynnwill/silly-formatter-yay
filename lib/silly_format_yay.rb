@@ -1,5 +1,4 @@
 require 'rspec/core/formatters/base_text_formatter'
-require "silly_format_yay/version"
 
 class SillyFormatYay
   # This registers the notifications this formatter supports, and tells
