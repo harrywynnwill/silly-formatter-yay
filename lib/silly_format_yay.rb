@@ -6,7 +6,7 @@ class SillyFormatYay
   # us that this was written against the RSpec 3.x formatter API.
   RSpec::Core::Formatters.register self, *[:example_started, :example_passed, :example_failed]
 
-    def initialize(_output)
+    def initialize(output)
       @all_example_ids = []
       @failed_example_ids = []
       @remaining_failures = []
