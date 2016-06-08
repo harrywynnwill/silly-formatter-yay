@@ -16,7 +16,6 @@ class SillyFormatYay
 # end
     def example_passed(example)
       # if MacOS.version >= :lion
-        @output.print (@output)
         @output.print ([' 🍺 ',' 🙌 ', ' 😍 '].sample).colorize(:background => :green)
       # else
       #   output.print ([' YAY ', ' YAAASS ', ' NICE '].sample).colorize(:background => :green)
@@ -25,7 +24,6 @@ class SillyFormatYay
 
     def example_failed(example)
       # if MacOS.version >= :lion
-        @output.print (@output)
         @output.print ([' 😨 ', ' 😵 ', ' 🙅 '].sample).colorize(:background => :red)
       # else
       #   output.print ([' NOOO ', ' LAME ', ' FFFUUUU '].sample).colorize(:background => :green)
