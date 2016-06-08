@@ -1,7 +1,7 @@
 # coding: utf-8
 # lib = File.expand_path('../lib', __FILE__)
 # $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-# require 'lib/rspec/formatter/silly_format_yay/version'
+require 'silly_format_yay/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "silly_format_yay"

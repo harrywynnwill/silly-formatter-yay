@@ -3,7 +3,6 @@ require "silly_format_yay/version"
 
 module RSpec
   module Formatters
-    module SillyFormatYay
       class SillyFormatYay < RSpec::Core::Formatters::BaseTextFormatter
 
         Object::RSpec::Core::Formatters.register self, *[:example_passed, :example_failed]
@@ -52,6 +51,5 @@ module RSpec
           end
 
       end
-    end
   end
 end
