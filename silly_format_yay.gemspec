@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   #   raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   # end
 
-  spec.files         = Dir["lib/**/*.rb"] + %W(LICENSE README.md Gemfile)
+  spec.files         = Dir["lib/**/*.rb"]
   # spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
