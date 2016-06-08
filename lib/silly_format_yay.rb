@@ -1,6 +1,5 @@
 require "silly_format_yay/version"
 require 'rspec/core/formatters/base_text_formatter'
-require 'colorize'
 
 module RSpec
   module Formatter
