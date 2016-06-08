@@ -14,17 +14,17 @@ class SillyFormatYay < RSpec::Core::Formatters::BaseTextFormatter
     end
 
 
-    def example_passed(example)
+    def example_passed(passed)
       # if MacOS.version >= :lion
-        print example.description.strip
+        print passed.example.description
         @output.print ([' 🍺 ',' 🙌 ', ' 😍 '].sample).colorize(:background => :green)
       # else
       #   output.print ([' YAY ', ' YAAASS ', ' NICE '].sample).colorize(:background => :green)
       # end
     end
 
-    def example_failed(example)
-        print example.description.strip
+    def example_failed(failed)
+        print failed.example.description
       # if MacOS.version >= :lion
         @output.print ([' 😨 ', ' 😵 ', ' 🙅 '].sample).colorize(:background => :red)
       # else
