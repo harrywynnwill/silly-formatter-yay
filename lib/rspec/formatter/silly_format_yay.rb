@@ -1,4 +1,4 @@
-require 'rspec/core/formatters/base_text_formatter'
+# require 'rspec/core/formatters/base_text_formatter'
 require "./silly_format_yay/version"
 
 module RSpec
@@ -7,34 +7,22 @@ module RSpec
       class SillyFormatYay < RSpec::Core::Formatters::BaseTextFormatter
 
         Object::RSpec::Core::Formatters.register self, *[:example_passed, :example_failed]
-# def start(StartNotification)
-# end
-#
-# * Once per example group
-#       def example_group_started(GroupNotification)
-#       end
-#
-# # * Once per example
-#       def example_started(ExampleNotification)
-#       end
-
-# * One of these per example, depending on outcome
-    def example_passed(example)
-      # if MacOS.version >= :lion
-        output.print ([' 🍺 ',' 🙌 ', ' 😍 '].sample).colorize(:background => :green)
-      # else
-      #   output.print [' YAY ', ' YAAASS ', ' NICE '].sample
-      # end
-    end
-#
-    def example_failed(example)
-      # if MacOS.version >= :lion
-        output.print ([' 😨 ', ' 😵 ', ' 🙅 '].sample).colorize(:background => :red)
-      # else
-      #   output.print [' NOOO ', ' LAME ', ' FFFUUUU '].sample
-      # end
-    end
-#
+          def example_passed(example)
+            # if MacOS.version >= :lion
+              output.print ([' 🍺 ',' 🙌 ', ' 😍 '].sample).colorize(:background => :green)
+            # else
+            #   output.print [' YAY ', ' YAAASS ', ' NICE '].sample
+            # end
+          end
+      #
+          def example_failed(example)
+            # if MacOS.version >= :lion
+              output.print ([' 😨 ', ' 😵 ', ' 🙅 '].sample).colorize(:background => :red)
+            # else
+            #   output.print [' NOOO ', ' LAME ', ' FFFUUUU '].sample
+            # end
+          end
+      #
 #       def example_pending(ExampleNotification)
 #       end
 #
