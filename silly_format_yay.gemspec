@@ -5,7 +5,7 @@ require 'lib/silly_format_yay/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "silly_format_yay"
-  spec.version       = SillyFormatYay::VERSION
+  spec.version       = '0.0.1'
   spec.authors       = ["Macey Baker"]
   spec.email         = ["macebake@gmail.com"]
 
