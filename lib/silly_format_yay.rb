@@ -15,8 +15,7 @@ class SillyFormatYay
 
 
     def example_passed(example)
-      "#{example.description.strip}"
-
+      super(example)
       # if MacOS.version >= :lion
         @output.print ([' 🍺 ',' 🙌 ', ' 😍 '].sample).colorize(:background => :green)
       # else
@@ -25,9 +24,7 @@ class SillyFormatYay
     end
 
     def example_failed(example)
-      "#{example.description.strip} "
-        "(FAILED - #{next_failure_index})"
-
+        super(example)
       # if MacOS.version >= :lion
         @output.print ([' 😨 ', ' 😵 ', ' 🙅 '].sample).colorize(:background => :red)
       # else
@@ -35,12 +32,12 @@ class SillyFormatYay
       # end
     end
 
-    private
-
-    def next_failure_index
-      @next_failure_index ||= 0
-      @next_failure_index += 1
-    end
+    # private
+    #
+    # def next_failure_index
+    #   @next_failure_index ||= 0
+    #   @next_failure_index += 1
+    # end
 
     # def close(example)
     # end
