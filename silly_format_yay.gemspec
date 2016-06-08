@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "silly_format_yay"
-  spec.version       = '0.3.1'
+  spec.version       = '0.3.2'
   spec.authors       = ["Macey Baker"]
   spec.email         = ["macebake@gmail.com"]
 

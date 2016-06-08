@@ -55,3 +55,7 @@ module RSpec
     end
   end
 end
+
+RSpec.configure do |config|
+  config.formatter = "RSpec::Formatters::SillyFormatYay"
+end
