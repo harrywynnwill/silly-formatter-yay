@@ -2,10 +2,10 @@ require "silly_format_yay/version"
 require 'rspec/core/formatters/base_text_formatter'
 
 module RSpec
-  module Formatter
-  class SillyFormatYay < RSpec::Core::Formatters::BaseTextFormatter
+  module Formatters
+    class SillyFormatYay < RSpec::Core::Formatters::BaseTextFormatter
 
-    RSpec::Core::Formatters.register(self, :example_passed, :example_failed)
+      Object::RSpec::Core::Formatters.register self, *[:example_passed, :example_failed]
 # def start(StartNotification)
 # end
 #
