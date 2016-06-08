@@ -1,4 +1,4 @@
-# require 'rspec/core/formatters/base_text_formatter'
+require 'rspec/core/formatters/base_text_formatter'
 require "./silly_format_yay/version"
 
 module RSpec
