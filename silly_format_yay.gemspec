@@ -1,11 +1,11 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'silly_format_yay/version'
+# lib = File.expand_path('../lib', __FILE__)
+# $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+# require 'lib/rspec/formatter/silly_format_yay/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "silly_format_yay"
-  spec.version       = SillyFormatYay::VERSION
+  spec.version       = '0.2.5'
   spec.authors       = ["Macey Baker"]
   spec.email         = ["macebake@gmail.com"]
 
@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   #   raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   # end
 
-  spec.files         = Dir["lib/**/*.rb"]
+  spec.files         = Dir["lib/**/**/*.rb"]
   # spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
