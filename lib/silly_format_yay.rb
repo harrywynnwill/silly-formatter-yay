@@ -4,7 +4,7 @@ require 'colorize'
 class SillyFormatYay
   # This registers the notifications this formatter supports, and tells
   # us that this was written against the RSpec 3.x formatter API.
-  RSpec::Core::Formatters.register self, *[:example_started, :example_passed, :example_failed]
+  RSpec::Core::Formatters.register self, *[:example_passed, :example_failed]
 
     def initialize(output)
       @all_example_ids = []
@@ -35,7 +35,9 @@ class SillyFormatYay
       #   output.print ([' NOOO ', ' LAME ', ' FFFUUUU '].sample).colorize(:background => :green)
       # end
     end
-    
+
+    private
+
     def next_failure_index
       @next_failure_index ||= 0
       @next_failure_index += 1
