@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "silly_format_yay"
-  spec.version       = '0.4.9'
+  spec.version       = '0.5.0'
   spec.authors       = ["Macey Baker"]
   spec.email         = ["macebake@gmail.com"]
 
